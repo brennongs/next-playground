@@ -8,14 +8,12 @@ export class Observable<T> implements Contract<T> {
   state: T;
 
   constructor(state: T) {
-    console.log(state)
     this.state = { ...state }
   }
 
   emit(action: (state: T) => T) {
     if (action) {
       const result = action(this.state)
-      console.log(result)
       if (result) this.state = {...result}
     }
 

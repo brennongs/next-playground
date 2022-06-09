@@ -14,8 +14,7 @@ const Main: React.FC = () => {
   const [currentOperator, setCurrentOperator] = React.useState<Operator>()
   
   React.useEffect(() => {
-    CALCULATOR.subscribe(({ value, history }) => {
-      console.log(value, history)
+    CALCULATOR.subscribe(({ value }) => {
       setDisplayValue(value)
       setResult(value)
     })

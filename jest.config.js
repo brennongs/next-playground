@@ -58,5 +58,6 @@ module.exports = {
    */
   moduleNameMapper: {
     '~/(.*)': '<rootDir>/$1',
+    '$/(.*)': '<rootDir>/src/$1'
   },
 };
